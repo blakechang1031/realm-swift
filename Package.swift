@@ -3,7 +3,8 @@
 import PackageDescription
 import Foundation
 
-let coreVersion = Version("14.14.0")
+// Xcode 26 fix: patched core fork (std::is_pod specializations removed, mirrors upstream v20)
+let coreVersion = Version("14.14.1")
 let cocoaVersion = Version("10.54.6")
 
 #if compiler(>=6)
@@ -161,7 +162,7 @@ let package = Package(
             targets: ["RealmSwift"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-core.git", exact: coreVersion)
+        .package(url: "https://github.com/blakechang1031/realm-core.git", exact: coreVersion)
     ],
     targets: [
       .target(
