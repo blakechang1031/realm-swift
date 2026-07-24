@@ -4,7 +4,7 @@ import PackageDescription
 import Foundation
 
 // Xcode 26 fix: patched core fork (std::is_pod specializations removed, mirrors upstream v20)
-let coreVersion = Version("14.14.1")
+let coreVersion = Version("14.14.2")
 let cocoaVersion = Version("10.54.6")
 
 #if compiler(>=6)
